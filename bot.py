@@ -204,8 +204,23 @@ async def start_handler(c: Client, m: Message):
         user.allowed = True
         user.set()
     res = await m.reply_text(
-        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram\n\n**𝖢𝗈𝗇𝗍𝖺𝖼𝗍 ➜ <a href=https://t.me/Snowball_Official>𝖮𝗐𝗇𝖾𝗋</a>",
-        quote=True,
+        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram\n\n**Check /about for more.",
+	    quote=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="https://t.me/Snowball_Official")],
+                [
+                    InlineKeyboardButton(
+                        "", url="https://github.com/yashoswalyo/MERGE-BOT"
+                    ),
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/{Config.OWNER_USERNAME}"
+                    ),
+                ],
+                [InlineKeyboardButton("Close 🔐", callback_data="close")],
+            ]
+        ),
+    )
     )
     del user
 
@@ -491,7 +506,7 @@ async def about_handler(c: Client, m: Message):
                 [InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="https://t.me/Snowball_Official")],
                 [
                     InlineKeyboardButton(
-                        "", url="https://github.com/yashoswalyo/MERGE-BOT"
+                        "𝖴𝖯𝖣𝖠𝖳𝖤𝖲", url="https://t.me/Rokubotz"
                     ),
                     InlineKeyboardButton(
                         "", url=f"https://t.me/{Config.OWNER_USERNAME}"
