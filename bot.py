@@ -197,7 +197,6 @@ async def start_handler(c: Client, m: Message):
         if user.allowed is False:
             res = await m.reply_text(
                 text=f"Hi **{m.from_user.first_name}**\n\n 🛡️ Unfortunately you can't use me\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 ➜ <a href=https://t.me/Snowball_Official>𝖮𝗐𝗇𝖾𝗋</a>",
-                quote=True,** ",
                 quote=True,
             )
             return
