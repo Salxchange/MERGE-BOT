@@ -90,7 +90,7 @@ async def loginHandler(c: Client, m: Message):
     user = UserSettings(m.from_user.id, m.from_user.first_name)
     if user.banned:
         await m.reply_text(text=f"**Banned User Detected!**\n  🛡️ Unfortunately you can't use me\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 ➜ <a href=https://t.me/Snowball_Official>𝖮𝗐𝗇𝖾𝗋</a>",
-                quote=True, quote=True)
+                quote=True,, quote=True)
         return
     if user.user_id == int(Config.OWNER):
         user.allowed = True
