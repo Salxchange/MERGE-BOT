@@ -221,9 +221,6 @@ async def start_handler(c: Client, m: Message):
             ]
         ),
     )
-    )
-    del user
-
 
 @mergeApp.on_message(
     (filters.document | filters.video | filters.audio) & filters.private
