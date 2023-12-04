@@ -217,7 +217,7 @@ async def start_handler(c: Client, m: Message):
                         "🌨️ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/Roofiverse"
                     ),
                 ],
-                [InlineKeyboardButton("Close 🔒", callback_data="close")],
+                [InlineKeyboardButton("Close 🔐", callback_data="close")],
             ]
         ),
     )
@@ -473,7 +473,7 @@ async def help_msg(c: Client, m: Message):
 5) Select rename if you want to give custom file name else press default**""",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Close 🔒", callback_data="close")]]
+            [[InlineKeyboardButton("Close 🔐", callback_data="close")]]
         ),
     )
 
@@ -509,7 +509,7 @@ async def about_handler(c: Client, m: Message):
                         "", url=f"https://t.me/{Config.OWNER_USERNAME}"
                     ),
                 ],
-                [InlineKeyboardButton("Close 🔒", callback_data="close")],
+                [InlineKeyboardButton("Close 🔐", callback_data="close")],
             ]
         ),
     )
