@@ -208,13 +208,13 @@ async def start_handler(c: Client, m: Message):
 	    quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="https://t.me/Snowball_Official")],
+                [InlineKeyboardButton("🧑‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="https://t.me/Snowball_Official")],
                 [
                     InlineKeyboardButton(
-                        "", url="https://github.com/yashoswalyo/MERGE-BOT"
+                        "⛅ 𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url="https://t.me/Rokubotz"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{Config.OWNER_USERNAME}"
+                        "🌨️ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/Roofiverse"
                     ),
                 ],
                 [InlineKeyboardButton("Close 🔐", callback_data="close")],
@@ -500,10 +500,10 @@ async def about_handler(c: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="https://t.me/Snowball_Official")],
+                [InlineKeyboardButton("𝖮𝗐𝗇𝖾𝗋", url="https://t.me/Snowball_Official")],
                 [
                     InlineKeyboardButton(
-                        "𝖴𝖯𝖣𝖠𝖳𝖤𝖲", url="https://t.me/Rokubotz"
+                        "", url="https://t.me/Rokubotz"
                     ),
                     InlineKeyboardButton(
                         "", url=f"https://t.me/{Config.OWNER_USERNAME}"
