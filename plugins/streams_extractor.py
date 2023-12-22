@@ -9,10 +9,10 @@ from __init__ import LOGGER, gDict, queueDB
 import os
 from bot import delete_all
 from helpers.display_progress import Progress
-from helpers.ffmpeg_helper import extractAudios, extractSubtitles
+from helpers.ffmpeg_helper import extractAudios, extractSubtitles,extractMediaInfo
 from helpers.uploader import uploadFiles
 
-async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=False, exSubs=False):
+async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=False, exSubs=False, extractMediaInfo=False):
     if not os.path.exists(f"downloads/{str(cb.from_user.id)}/"):
         os.makedirs(f"downloads/{str(cb.from_user.id)}/")
     _hold = await cb.message.edit(text="Please wait")
