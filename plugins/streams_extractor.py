@@ -9,7 +9,7 @@ from __init__ import LOGGER, gDict, queueDB
 import os
 from bot import delete_all
 from helpers.display_progress import Progress
-from helpers.ffmpeg_helper import extractAudios, extractSubtitles, extractVideos
+from helpers.ffmpeg_helper import extractVideos, extractAudios, extractSubtitles
 from helpers.uploader import uploadFiles
 
 async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=False, exSubs=False, exVideos=False):
@@ -49,6 +49,9 @@ async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=Fals
         await asyncio.sleep(4)
     await _hold.edit_text("Fetching data")
     await asyncio.sleep(3)
+    if exVideos:
+        await _hold.edit_text("Extracting Videos")
+        extract_dir = await extractVideos(file_dl_path, cb.from_user.id)
     if exAudios:
         await _hold.edit_text("Extracting Audios")
         extract_dir = await extractAudios(file_dl_path,cb.from_user.id)
