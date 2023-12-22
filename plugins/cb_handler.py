@@ -62,7 +62,7 @@ async def callback_handler(c: Client, cb: CallbackQuery):
             await cb.message.delete()
             await delete_all(root=f"downloads/{cb.from_user.id}/")
             queueDB.update(
-                {cb.from_user.id: {"videos": [], "subtitles": [], "audios": "json": []}}
+                {cb.from_user.id: {"videos": [], "subtitles": [], "audios": [], "json": []}}
             )
             formatDB.update({cb.from_user.id: None})
             return
