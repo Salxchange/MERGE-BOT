@@ -55,10 +55,8 @@ async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=Fals
     if exSubs:
         await _hold.edit_text("Extracting Subtitles")
         extract_dir = await extractSubtitles(file_dl_path, cb.from_user.id)
-      if exVideos:
-        await _hold.edit_text("Extracting Video")
-        extract_dir = await extractVideos(file_dl_path, cb.from_user.id)
 
+    
     if extract_dir is None:
         await cb.message.edit("❌ Failed to Extract Streams !")
         await delete_all(root=f"downloads/{str(cb.from_user.id)}")
