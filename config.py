@@ -11,6 +11,6 @@ class Config(object):
     DATABASE_URL = ("mongodb+srv://ROKU:ROKU@cluster0.nxjre0s.mongodb.net/?retryWrites=true&w=majority")
     LOGCHANNEL = ("-1001621207300")  # Add channel id as -100 + Actual ID
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", "root")
-    USER_SESSION_STRING = ("")
+    USER_SESSION_STRING =
     IS_PREMIUM = False
     MODES = ["video-video", "video-audio", "video-subtitle", "extract-streams"]
