@@ -473,8 +473,6 @@ async def extractSubtitles(path_to_file, user_id):
         LOGGER.warning(f"{extract_dir} is empty")
         return None
 
-# You may want to set up a logger to use.
-LOGGER = logging.getLogger(__name__)
 
 async def extractMediaInfo(path_to_file, user_id):
     """
