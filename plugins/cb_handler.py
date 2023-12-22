@@ -412,8 +412,8 @@ async def callback_handler(c: Client, cb: CallbackQuery):
             if edata == 'audio':
                 LOGGER.info('audio')
                 await streamsExtractor(c, cb, media_mid, exAudios=True)
-              edata == 'mediainfo':
-                LOGGER.info('mediainfo')
+              edata == 'video':
+                LOGGER.info('video')
                 await streamsExtractor(c, cb, media_mid, exMediaInfo=True)
             elif edata == 'subtitle':
                 await streamsExtractor(c, cb, media_mid, exSubs=True)
