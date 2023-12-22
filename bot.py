@@ -446,7 +446,7 @@ async def media_extracter(c: Client, m: Message):
                 return
             markup = bMaker.makebuttons(
                 set1=["Video", "Audio", "Subtitle", "Mediainfo", "Cancel"],
-                set2=[f"extract_video_{mid}", f"extract_audio_{mid}", f"extract_subtitle_{mid}", f"extract_mediainfo_{mid}, 'cancel'],
+                set2=[f"extract_video_{mid}", f"extract_audio_{mid}", f"extract_subtitle_{mid}", f"extract_mediainfo_{mid}", 'cancel'],
                 isCallback=True,
                 rows=2,
             )
