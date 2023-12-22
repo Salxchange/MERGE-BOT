@@ -472,31 +472,3 @@ async def extractSubtitles(path_to_file, user_id):
     else:
         LOGGER.warning(f"{extract_dir} is empty")
         return None
-
-
-async def extractMediaInfo(path_to_file, user_id):
-    """
-    docs
-    """
-    dir_name = os.path.dirname(os.path.dirname(path_to_file))
-    if not os.path.exists(path_to_file):
-        return None
-    if not os.path.exists(dir_name + "/extract_mediainfo"):
-        os.makedirs(dir_name + "/extract_mediainfo")
-    
-    extract_dir = dir_name + "/extract_mediainfo"
-    mediainfo_file = os.path.join(extract_dir, "mediainfo.json")
-
-    try:
-        cmd = ["mediainfo", "--Output=JSON", path_to_file]
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        mediainfo_data = result.stdout
-
-        with open(mediainfo_file, 'w') as f:
-            f.write(mediainfo_data)
-        
-        LOGGER.info("Mediainfo extraction complete")
-        return extract_dir
-    except Exception as e:
-        LOGGER.error(f"Failed to extract mediainfo: {e}")
-        return None
