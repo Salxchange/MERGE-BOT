@@ -3,7 +3,7 @@ import os
 
 class Config(object):
     API_HASH =("b36c5dc986f77eedd4bbf356b65eab19")
-    BOT_TOKEN = ("6702684341:AAFqjTr8dw4UJsie1Kk_-UqC0Ao87UaEKJs")
+    BOT_TOKEN = ("6926658380:AAEpfUlnnYwUVA-J2QsBuFxhL4v46VKISKE")
     TELEGRAM_API = ("21027612")
     OWNER = ("5098097249")
     OWNER_USERNAME = ("Salazar5000")
