@@ -4,7 +4,7 @@ import os
 class Config(object):
     API_HASH =("b36c5dc986f77eedd4bbf356b65eab19")
     BOT_TOKEN = ("6702684341:AAFqjTr8dw4UJsie1Kk_-UqC0Ao87UaEKJs")
-    TELEGRAM_API = ["21027612"]
+    TELEGRAM_API = ("21027612")
     OWNER = ("5098097249")
     OWNER_USERNAME = ("Salazar5000")
     PASSWORD = ("iam_roku")
