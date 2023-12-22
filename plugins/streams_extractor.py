@@ -9,7 +9,7 @@ from __init__ import LOGGER, gDict, queueDB
 import os
 from bot import delete_all
 from helpers.display_progress import Progress
-from helpers.ffmpeg_helper import extractAudios, extractSubtitles,extractVideos
+from helpers.ffmpeg_helper import extractAudios, extractSubtitles, extractVideos
 from helpers.uploader import uploadFiles
 
 async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=False, exSubs=False, extractVideos=False):
