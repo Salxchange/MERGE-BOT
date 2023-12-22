@@ -300,6 +300,53 @@ async def take_screen_shot(video_file, output_directory, ttl):
     else:
         return None
 
+async def extractVideos(path_to_file, user_id):
+    """
+    docs
+    """
+    dir_name = os.path.dirname(os.path.dirname(path_to_file))
+    if not os.path.exists(path_to_file):
+        return None
+    if not os.path.exists(dir_name + "/extract_videos"):
+        os.makedirs(dir_name + "/extract_videos")
+    
+    videoStreamsData = ffmpeg.probe(path_to_file)
+    extract_dir = dir_name + "/extract_videos"
+    videos = []
+    for stream in videoStreamsData.get("streams"):
+        try:
+            if stream["codec_type"] == "video":
+                videos.append(stream)
+        except Exception as e:
+            LOGGER.warning(e)
+    
+    for video in videos:
+        extractcmd = ["ffmpeg", "-hide_banner", "-i", path_to_file, "-map", f"0:{video['index']}"]
+        
+        try:
+            output_file = f"video_{video['index']}.mkv"
+            extractcmd.extend(["-c", "copy", f"{extract_dir}/{output_file}"])
+            
+            LOGGER.info(extractcmd)
+            subprocess.call(extractcmd)
+        except Exception as e:
+            LOGGER.error(f"Something went wrong: {e}")
+    
+    if get_path_size(extract_dir) > 0:
+        return extract_dir
+    else:
+        LOGGER.warning(f"{extract_dir} is empty")
+        return None
+
+# Additional function to get the size of a directory
+def get_path_size(directory):
+    total_size = 0
+    with os.scandir(directory) as it:
+        for entry in it:
+            if entry.is_file():
+                total_size += entry.stat().st_size
+    return total_size
+
 
 async def extractAudios(path_to_file, user_id):
     """
