@@ -9,7 +9,7 @@ from __init__ import LOGGER, gDict, queueDB
 import os
 from bot import delete_all
 from helpers.display_progress import Progress
-from helpers.ffmpeg_helper import extractAudios, extractSubtitles, extractVideos
+from helpers.ffmpeg_helper import extractAudios, extractSubtitles, extractVideos, extractMediaInfo
 from helpers.uploader import uploadFiles
 
 async def streamsExtractor(c: Client, cb:CallbackQuery ,media_mid, exAudios=False, exSubs=False, exVideos=False, exMediaInfo=False):
@@ -65,7 +65,7 @@ if exMediaInfo:
     if extract_dir is None:
         await cb.message.edit("❌ Failed to Extract Streams !")
         await delete_all(root=f"downloads/{str(cb.from_user.id)}")
-        queueDB.update({cb.from_user.id: {"videos": [], "subtitles": [], "audios": []}})
+        queueDB.update({cb.from_user.id: {"videos": [], "subtitles": [], "audios": [], "mediainfo" []}})
         return
 
     for dirpath, dirnames, filenames in os.walk(extract_dir):
@@ -85,6 +85,6 @@ if exMediaInfo:
             LOGGER.info(f"Uploaded: {up_path}")
     await cb.message.delete()
     await delete_all(root=f"downloads/{str(cb.from_user.id)}")
-    queueDB.update({cb.from_user.id: {"videos": [], "subtitles": [], "audios": []}})
+    queueDB.update({cb.from_user.id: {"videos": [], "subtitles": [], "audios": [], "mediainfo" []}})
     
     return
