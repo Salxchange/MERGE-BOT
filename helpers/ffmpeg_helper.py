@@ -443,7 +443,7 @@ async def extractSubtitles(path_to_file, user_id):
                     + subtitle["tags"]["title"]
                     + "."
                     + subtitle["codec_type"]
-                    + ".srt"
+                    + ".ass"
                 )
                 output_file = output_file.replace(" ", ".")
             except:
@@ -454,11 +454,11 @@ async def extractSubtitles(path_to_file, user_id):
                         + subtitle["tags"]["language"]
                         + "."
                         + subtitle["codec_type"]
-                        + ".srt"
+                        + ".ass"
                     )
                 except:
                     output_file = (
-                        str(subtitle["index"]) + "." + subtitle["codec_type"] + ".srt"
+                        str(subtitle["index"]) + "." + subtitle["codec_type"] + ".ass"
                     )
             extractcmd.append("-c")
             extractcmd.append("copy")
