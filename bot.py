@@ -473,7 +473,7 @@ async def help_msg(c: Client, m: Message):
 5) Select rename if you want to give custom file name else press default**""",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Close 🔐", callback_data="close")]]
+            [[InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾 ✘", callback_data="close")]]
         ),
     )
 
@@ -484,6 +484,7 @@ async def about_handler(c: Client, m: Message):
         text="""
 **ᴡʜᴀᴛ's ɴᴇᴡ:**
 👨‍💻 ʙᴀɴ/ᴜɴʙᴀɴ ᴜsᴇʀs
+👨‍💻 ᴇxᴛʀᴀᴄᴛ ᴠɪᴅᴇᴏ
 👨‍💻 ᴇxᴛʀᴀᴄᴛ ᴀʟʟ ᴀᴜᴅɪᴏs ᴀɴᴅ sᴜʙᴛɪᴛʟᴇs ғʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ
 👨‍💻 ᴍᴇʀɢᴇ ᴠɪᴅᴇᴏ + ᴀᴜᴅɪᴏ 
 👨‍💻 ᴍᴇʀɢᴇ ᴠɪᴅᴇᴏ + sᴜʙᴛɪᴛʟᴇs
@@ -509,7 +510,7 @@ async def about_handler(c: Client, m: Message):
                         "", url=f"https://t.me/{Config.OWNER_USERNAME}"
                     ),
                 ],
-                [InlineKeyboardButton("Close 🔐", callback_data="close")],
+                [InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾 ✘", callback_data="close")],
             ]
         ),
     )
