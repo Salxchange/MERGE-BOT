@@ -203,7 +203,7 @@ async def start_handler(c: Client, m: Message):
     else:
         user.allowed = True
         user.set()
-    res = await m.reply_photo(config.START_PIC,
+    res = await m.reply_photo(START_PIC,
         caption=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram\n\n**Check /about for more.",
 	    quote=True,
         reply_markup=InlineKeyboardMarkup(
