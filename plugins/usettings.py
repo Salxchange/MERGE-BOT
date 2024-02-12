@@ -44,9 +44,9 @@ async def userSettings(
 <b><u>Merge Bot settings for <a href='tg://user?id={uid}'>{fname} {lname}</a></u></b>
     ╭──────────────────────
     ┣**🎭 ID: <u>{usettings.user_id}</u>**
-    ┣**{'🪺' if usettings.banned else} Ban Status: <u>{usettings.banned}</u>**
-    ┣**{'🌦️' if usettings.allowed else} Allowed: <u>{usettings.allowed}</u>**
-    ┣**{'🏜️' if usettings.edit_metadata else} Edit Metadata: <u>{usettings.edit_metadata}</u>**
+    ┣**{'❌' if usettings.banned else '🪺'} Ban Status: <u>{usettings.banned}</u>**
+    ┣**{'🌦️' if usettings.allowed else '🌦️'} Allowed: <u>{usettings.allowed}</u>**
+    ┣**{'🏜️' if usettings.edit_metadata else '❌'} Edit Metadata: <u>{usettings.edit_metadata}</u>**
     ┣**🚏 Merge mode: <u>{userMergeModeStr}</u>**
     ╰──────────────────────
 """
