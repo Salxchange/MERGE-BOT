@@ -214,7 +214,7 @@ async def start_handler(c: Client, m: Message):
                         "⛅ 𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url="https://t.me/Rokubotz"
                     ),
                     InlineKeyboardButton(
-                        "🌨️ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/Roofiverse"
+                        "🌨️ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/Team_Roku"
                     ),
                 ],
                 [InlineKeyboardButton("Close 🔐", callback_data="close")],
