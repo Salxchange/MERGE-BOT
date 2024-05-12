@@ -2,12 +2,12 @@ import os
 
 
 class Config(object):
-    API_HASH =("d28604398dc13af15dd108bb34a27a54")
-    BOT_TOKEN = ("6460494394:AAEkGWs3MfUMWbZGDBuRJknnu2BlCxmvvMo")
-    TELEGRAM_API = ("7324525")
-    OWNER = ("1966867320")
+    API_HASH =("108df940118cde6c5f524f4d439a19d3")
+    BOT_TOKEN = ("7057424985:AAHg9VPGpVrVS_-oeSTCOz50R5CJRvsLgD8")
+    TELEGRAM_API = ("26545740")
+    OWNER = ("6820572640")
     OWNER_USERNAME = ("None")
-    PASSWORD = ("iam_roku")
+    PASSWORD = ("mysterydemon")
     DATABASE_URL = ("mongodb+srv://ROKU:ROKU@cluster0.nxjre0s.mongodb.net/?retryWrites=true&w=majority")
     LOGCHANNEL = ("-1001560632964")  # Add channel id as -100 + Actual ID
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", "root")
