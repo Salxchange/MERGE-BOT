@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
 
 # RUN curl https://rclone.org/install.sh | bash
 
-COPY requirements.txt .
+COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
