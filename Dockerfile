@@ -1,14 +1,13 @@
-FROM ubuntu:latest
+FROM python:3.10-slim-buster
 
-WORKDIR /usr/src/mergebot
-RUN chmod 777 /usr/src/mergebot
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
-    apt-get install -y python3 python3-pip git \
-    p7zip-full p7zip-rar xz-utils wget curl pv jq \
-    ffmpeg unzip neofetch mediainfo
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install git wget pv jq python3-dev mediainfo gcc libsm6 libxext6 libfontconfig1 libxrender1 libgl1-mesa-glx -y
 
-# RUN curl https://rclone.org/install.sh | bash
+COPY --from=mwader/static-ffmpeg:6.1 /ffmpeg /bin/ffmpeg
+COPY --from=mwader/static-ffmpeg:6.1 /ffprobe /bin/ffprobe
 
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
