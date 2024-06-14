@@ -2,9 +2,9 @@ import os
 
 
 class Config(object):
-    API_HASH =("d28604398dc13af15dd108bb34a27a54")
+    API_HASH =("108df940118cde6c5f524f4d439a19d3")
     BOT_TOKEN = ("6460494394:AAEkGWs3MfUMWbZGDBuRJknnu2BlCxmvvMo")
-    TELEGRAM_API = ("7324525")
+    TELEGRAM_API = ("26545740")
     OWNER = ("1966867320")
     OWNER_USERNAME = ("None")
     PASSWORD = ("iam_roku")
